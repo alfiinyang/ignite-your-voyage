@@ -8,48 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 220 13% 18%;
+    /* Hybrid Dark Theme - Unbordered Path */
+    --background: 240 4% 11%; /* Charcoal Gray #1C1C1E */
+    --foreground: 240 6% 90%; /* Light Gray #E4E4E7 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card: 240 6% 18%; /* Dark Slate #2A2A30 */
+    --card-foreground: 240 6% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --section-light: 240 14% 97%; /* Soft Off-White #F7F7F8 */
+    --section-light-foreground: 240 6% 11%; /* Charcoal #1A1A1D */
 
-    /* Career coaching brand colors */
-    --primary: 214 78% 57%; /* Soft blue #4A90E2 */
+    --section-navy: 217 46% 12%; /* Deep Navy #0F1A2B */
+    --section-navy-foreground: 240 6% 90%;
+
+    --popover: 240 6% 18%;
+    --popover-foreground: 240 6% 90%;
+
+    /* Accent Colors */
+    --primary: 214 78% 57%; /* Bright Blue #4A90E2 */
     --primary-foreground: 0 0% 100%;
     --primary-light: 214 78% 67%;
     --primary-glow: 214 78% 77%;
 
-    --secondary: 88 60% 62%; /* Light green #7ED321 */
-    --secondary-foreground: 220 13% 18%;
+    --secondary: 88 60% 62%; /* Bright Lime Green #7ED321 */
+    --secondary-foreground: 240 6% 11%;
     --secondary-light: 88 60% 72%;
+    --secondary-hover: 88 60% 72%; /* Lighter green for hover */
 
-    --accent: 54 91% 55%; /* Soft yellow #F8E71C */
-    --accent-foreground: 220 13% 18%;
+    --accent: 54 91% 55%; /* Vibrant Yellow #F8E71C */
+    --accent-foreground: 240 6% 11%;
     --accent-light: 54 91% 65%;
+    --accent-hover: 54 91% 65%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 240 4% 65%; /* Muted Gray #A1A1AA */
+    --muted-foreground: 240 4% 65%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 31% 91%;
-    --input: 214 31% 91%;
+    --border: 240 6% 20%; /* Subtle Gray #2F2F35 */
+    --input: 240 6% 20%;
     --ring: 214 78% 57%;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--section-navy)), hsl(var(--primary)));
     --gradient-success: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
     
     /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(var(--primary) / 0.1);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
-    --shadow-card: 0 10px 25px -5px hsl(220 13% 18% / 0.1);
+    --shadow-soft: 0 4px 6px -1px hsl(214 78% 57% / 0.2);
+    --shadow-glow: 0 0 40px hsl(214 78% 57% / 0.2); /* Soft Indigo Glow */
+    --shadow-card: 0 10px 25px -5px hsl(214 78% 57% / 0.2);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -163,5 +172,15 @@ All colors MUST be HSL.
   
   .transition-smooth {
     transition: var(--transition-smooth);
+  }
+
+  .section-light {
+    background: hsl(var(--section-light));
+    color: hsl(var(--section-light-foreground));
+  }
+
+  .section-navy {
+    background: hsl(var(--section-navy));
+    color: hsl(var(--section-navy-foreground));
   }
 }
