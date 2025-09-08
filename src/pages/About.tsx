@@ -15,7 +15,7 @@ const About = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-12 bg-background">
           <div className="container mx-auto px-6">
-            <div className="text-center space-y-6 mb-16">
+            <div className="text-center max-w-4xl mx-auto space-y-6 mb-16">
               <h1 className="text-4xl md:text-6xl font-bold">
                 Our <span className="text-primary">Mission</span>
               </h1>
