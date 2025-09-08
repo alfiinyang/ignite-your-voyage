@@ -39,7 +39,7 @@ const Contact = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-secondary">
+      <section className="pt-24 pb-16 section-navy">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
