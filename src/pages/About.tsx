@@ -13,7 +13,7 @@ const About = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="pt-36 pb-12 bg-background">
+        <section className="pt-36 pb-12 section-navy">
           <div className="container mx-auto px-6">
             <div className="text-center space-y-6 mb-16">
               <h1 className="text-4xl md:text-6xl font-bold">
