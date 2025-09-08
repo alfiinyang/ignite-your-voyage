@@ -45,7 +45,7 @@ const Services = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-36 pb-20 section-navy">
+      <section className="pt-36 pb-12 section-navy">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
             <div className="space-y-6 mb-16">
