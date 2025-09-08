@@ -48,13 +48,15 @@ const Services = () => {
       <section className="pt-24 pb-16 section-navy">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Career Coaching <span className="text-primary">Services</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Choose the perfect coaching solution to accelerate your career growth. 
-              From personalized 1-on-1 sessions to intensive bootcamps.
-            </p>
+            <div className="space-y-6 mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground">
+                Career Coaching <span className="text-primary">Services</span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Choose the perfect coaching solution to accelerate your career growth. 
+                From personalized 1-on-1 sessions to intensive bootcamps.
+              </p>
+            </div>
           </div>
         </div>
       </section>
