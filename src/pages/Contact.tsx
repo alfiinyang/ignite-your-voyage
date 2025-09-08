@@ -45,7 +45,7 @@ const Contact = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Get In <span className="text-primary">Touch</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-foreground mb-8 leading-relaxed">
               Ready to start your career transformation? Let's talk about your goals 
               and how we can help you achieve them.
             </p>
@@ -63,7 +63,7 @@ const Contact = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 Send Us a Message
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-foreground mb-8">
                 Fill out the form below and we'll get back to you within 24 hours. 
                 Tell us about your career goals and challenges.
               </p>
@@ -161,7 +161,7 @@ const Contact = () => {
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
                 Contact Information
               </h2>
-              <p className="text-muted-foreground mb-8">
+              <p className="text-foreground mb-8">
                 We're here to help you navigate your career journey. 
                 Reach out through any of these channels.
               </p>
@@ -177,7 +177,7 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
                           <p className="text-lg font-medium text-primary mb-1">{info.details}</p>
-                          <p className="text-sm text-muted-foreground">{info.description}</p>
+                          <p className="text-sm text-slate-600">{info.description}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -195,7 +195,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-2">
                       How quickly can I start coaching?
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-slate-600 text-sm">
                       Most clients can start within 1-2 weeks of initial contact, depending on availability and service type.
                     </p>
                   </div>
@@ -203,7 +203,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-2">
                       Do you offer free consultations?
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-slate-600 text-sm">
                       Yes! We offer a complimentary 30-minute consultation to discuss your goals and how we can help.
                     </p>
                   </div>
@@ -211,7 +211,7 @@ const Contact = () => {
                     <h4 className="font-semibold text-foreground mb-2">
                       What if I'm not sure which service is right for me?
                     </h4>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-slate-600 text-sm">
                       That's what the consultation is for! We'll assess your situation and recommend the best approach.
                     </p>
                   </div>

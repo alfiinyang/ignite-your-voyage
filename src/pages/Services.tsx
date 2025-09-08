@@ -51,7 +51,7 @@ const Services = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Career Coaching <span className="text-primary">Services</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-foreground mb-8 leading-relaxed">
               Choose the perfect coaching solution to accelerate your career growth. 
               From personalized 1-on-1 sessions to intensive bootcamps.
             </p>
@@ -72,7 +72,7 @@ const Services = () => {
                     </div>
                     <div>
                       <CardTitle className="text-xl text-foreground">{service.title}</CardTitle>
-                      <div className="flex items-center space-x-4 text-sm text-muted-foreground mt-1">
+                      <div className="flex items-center space-x-4 text-sm text-slate-600 mt-1">
                         <div className="flex items-center space-x-1">
                           <Clock className="h-4 w-4" />
                           <span>{service.duration}</span>
@@ -84,7 +84,7 @@ const Services = () => {
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-slate-600">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
@@ -114,7 +114,7 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
               How It Works
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground">
               Our proven process ensures you get maximum value from every session
             </p>
           </div>
@@ -125,7 +125,7 @@ const Services = () => {
                 1
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Assessment</h3>
-              <p className="text-muted-foreground">We start with a comprehensive evaluation of your current situation and goals.</p>
+              <p className="text-slate-600">We start with a comprehensive evaluation of your current situation and goals.</p>
             </div>
             
             <div className="text-center">
@@ -133,7 +133,7 @@ const Services = () => {
                 2
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Strategy</h3>
-              <p className="text-muted-foreground">Together, we create a personalized action plan tailored to your unique path.</p>
+              <p className="text-slate-600">Together, we create a personalized action plan tailored to your unique path.</p>
             </div>
             
             <div className="text-center">
@@ -141,7 +141,7 @@ const Services = () => {
                 3
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">Execution</h3>
-              <p className="text-muted-foreground">We work together to implement your plan with ongoing support and accountability.</p>
+              <p className="text-slate-600">We work together to implement your plan with ongoing support and accountability.</p>
             </div>
           </div>
         </div>

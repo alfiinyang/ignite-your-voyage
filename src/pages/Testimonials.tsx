@@ -80,7 +80,7 @@ const Testimonials = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
               Success <span className="text-primary">Stories</span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-xl text-foreground mb-8 leading-relaxed">
               Real results from real people. See how career coaching has transformed 
               the professional lives of hundreds of young adults.
             </p>
@@ -97,7 +97,7 @@ const Testimonials = () => {
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
-                <div className="text-sm md:text-base text-muted-foreground">
+                <div className="text-sm md:text-base text-slate-600">
                   {stat.label}
                 </div>
               </div>
@@ -113,7 +113,7 @@ const Testimonials = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               What Our Clients Say
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-foreground">
               Don't just take our word for it - hear from the professionals who've 
               transformed their careers with our guidance.
             </p>
@@ -145,7 +145,7 @@ const Testimonials = () => {
                     </Avatar>
                     <div>
                       <div className="font-semibold text-foreground">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground">
+                      <div className="text-sm text-slate-600">
                         {testimonial.role} • {testimonial.company}
                       </div>
                     </div>
@@ -170,7 +170,7 @@ const Testimonials = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Ready to Write Your Success Story?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="text-lg text-foreground mb-8">
               Join hundreds of professionals who have transformed their careers. 
               Your success story could be next.
             </p>
