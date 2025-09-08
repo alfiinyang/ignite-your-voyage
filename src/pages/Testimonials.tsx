@@ -74,16 +74,18 @@ const Testimonials = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 section-navy">
+      <section className="py-20 section-navy">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-              Success <span className="text-primary">Stories</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-              Real results from real people. See how career coaching has transformed 
-              the professional lives of hundreds of young adults.
-            </p>
+            <div className="space-y-6 mb-16">
+              <h1 className="text-4xl md:text-6xl font-bold text-foreground">
+                Success <span className="text-primary">Stories</span>
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Real results from real people. See how career coaching has transformed 
+                the professional lives of hundreds of young adults.
+              </p>
+            </div>
           </div>
         </div>
       </section>
