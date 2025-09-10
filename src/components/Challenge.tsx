@@ -14,22 +14,7 @@ const Challenge = () => {
             
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                You've just graduated or you're about to graduate, and the world feels overwhelming. 
-                Everyone's asking "What's next?" but no one's showing you how to figure it out.
-              </p>
-              
-              <p>
-                Career fairs feel impersonal. Online job boards are confusing. 
-                Your friends seem to have it all figured out, but you're still wondering...
-              </p>
-              
-              <blockquote className="border-l-4 border-primary pl-6 italic text-foreground font-medium">
-                "What if I choose the wrong path? What if I waste my potential? 
-                How do I even know what I'm good at?"
-              </blockquote>
-              
-              <p className="font-medium text-foreground">
-                You're not alone. And more importantly, you don't have to figure it out alone.
+                Graduating can feel overwhelming. Everyone's asking 'What's next?' but it's hard to give any answers because you're not sure if you even know what's next. Career fairs feel impersonal, the idea of further study seems daunting and life is getting confusing, some friends seem to have it all figured out, still many are left wondering what to do next. You're not alone and you're not broken.
               </p>
             </div>
           </div>
