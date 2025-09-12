@@ -8,47 +8,47 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Bold Warm Therapeutic Theme - High Contrast */
-    --background: 15 15% 98%; /* Crisp warm white #FDFCFB */
-    --foreground: 25 40% 12%; /* Deep rich brown #1F1812 */
+    /* Bright Warm Therapeutic Theme - Light & Vibrant */
+    --background: 15 20% 99%; /* Very bright warm white #FEFEFE */
+    --foreground: 25 40% 10%; /* Deep rich brown for contrast */
 
     --card: 0 0% 100%; /* Pure white for cards */
-    --card-foreground: 25 40% 12%;
+    --card-foreground: 25 40% 10%;
 
-    --section-light: 15 30% 95%; /* Soft warm light #F7F2EE */
-    --section-light-foreground: 25 40% 12%; /* Deep rich brown */
+    --section-light: 15 35% 97%; /* Very bright warm light #FAFAF8 */
+    --section-light-foreground: 25 40% 10%; /* Deep rich brown */
 
-    --section-navy: 15 45% 85%; /* Bold warm blush #E0C5B8 */
-    --section-navy-foreground: 25 40% 12%;
+    --section-navy: 15 50% 90%; /* Bright warm blush #EDD5C8 */
+    --section-navy-foreground: 25 40% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 25 40% 12%;
+    --popover-foreground: 25 40% 10%;
 
-    /* Accent Colors - Bold & Vibrant */
-    --primary: 15 75% 45%; /* Bold dusty rose #B85A3E */
+    /* Accent Colors - Bright & Vibrant */
+    --primary: 15 85% 55%; /* Bright dusty rose #D4623F */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 15 75% 55%;
-    --primary-glow: 15 75% 65%;
+    --primary-light: 15 85% 65%;
+    --primary-glow: 15 85% 75%;
 
-    --secondary: 25 80% 40%; /* Vibrant terracotta #B85C2A */
+    --secondary: 25 90% 50%; /* Very bright terracotta #D4662E */
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 25 80% 50%;
-    --secondary-hover: 25 80% 50%;
+    --secondary-light: 25 90% 60%;
+    --secondary-hover: 25 90% 60%;
 
-    --accent: 35 90% 35%; /* Rich golden amber #B8751A */
+    --accent: 35 95% 45%; /* Bright golden amber #D4801C */
     --accent-foreground: 0 0% 100%;
-    --accent-light: 35 90% 45%;
-    --accent-hover: 35 90% 45%;
+    --accent-light: 35 95% 55%;
+    --accent-hover: 35 95% 55%;
 
-    --muted: 20 25% 65%; /* Better contrast muted #AF9E94 */
-    --muted-foreground: 25 35% 25%;
+    --muted: 20 30% 75%; /* Brighter muted #C4B5AB */
+    --muted-foreground: 25 35% 20%;
 
-    --destructive: 0 80% 45%;
+    --destructive: 0 85% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 20 30% 80%; /* More defined warm border #CFC0B5 */
-    --input: 20 30% 80%;
-    --ring: 15 75% 45%;
+    --border: 20 35% 85%; /* Brighter warm border #DDCDC1 */
+    --input: 20 35% 85%;
+    --ring: 15 85% 55%;
 
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--section-navy)), hsl(var(--primary)));
@@ -56,9 +56,9 @@ All colors MUST be HSL.
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-light)));
     
     /* Shadows */
-    --shadow-soft: 0 4px 6px -1px hsl(15 75% 45% / 0.25);
-    --shadow-glow: 0 0 40px hsl(15 75% 45% / 0.3); /* Bold warm glow */
-    --shadow-card: 0 10px 25px -5px hsl(15 75% 45% / 0.2);
+    --shadow-soft: 0 4px 6px -1px hsl(15 85% 55% / 0.2);
+    --shadow-glow: 0 0 40px hsl(15 85% 55% / 0.25); /* Bright warm glow */
+    --shadow-card: 0 10px 25px -5px hsl(15 85% 55% / 0.15);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -83,37 +83,37 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 25 30% 6%; /* Very rich dark brown */
-    --foreground: 15 15% 96%;
+    --background: 25 25% 15%; /* Lighter dark background */
+    --foreground: 15 20% 98%;
 
-    --card: 25 30% 10%;
-    --card-foreground: 15 15% 96%;
+    --card: 25 25% 18%;
+    --card-foreground: 15 20% 98%;
 
-    --popover: 25 30% 10%;
-    --popover-foreground: 15 15% 96%;
+    --popover: 25 25% 18%;
+    --popover-foreground: 15 20% 98%;
 
-    --primary: 15 80% 65%; /* Very bright dusty rose for dark mode */
-    --primary-foreground: 25 30% 6%;
-    --primary-light: 15 80% 75%;
-    --primary-glow: 15 80% 85%;
+    --primary: 15 90% 70%; /* Very bright dusty rose for dark mode */
+    --primary-foreground: 25 25% 15%;
+    --primary-light: 15 90% 80%;
+    --primary-glow: 15 90% 90%;
 
-    --secondary: 25 85% 60%; /* Very bright terracotta for dark mode */
-    --secondary-foreground: 25 30% 6%;
-    --secondary-light: 25 85% 70%;
+    --secondary: 25 90% 65%; /* Very bright terracotta for dark mode */
+    --secondary-foreground: 25 25% 15%;
+    --secondary-light: 25 90% 75%;
 
-    --accent: 35 95% 55%; /* Very bright amber for dark mode */
-    --accent-foreground: 25 30% 6%;
-    --accent-light: 35 95% 65%;
+    --accent: 35 100% 60%; /* Very bright amber for dark mode */
+    --accent-foreground: 25 25% 15%;
+    --accent-light: 35 100% 70%;
 
-    --muted: 20 20% 35%;
-    --muted-foreground: 20 20% 75%;
+    --muted: 20 25% 45%;
+    --muted-foreground: 20 25% 80%;
 
-    --destructive: 0 85% 60%;
+    --destructive: 0 90% 65%;
     --destructive-foreground: 0 0% 95%;
 
-    --border: 20 25% 30%;
-    --input: 20 25% 30%;
-    --ring: 15 80% 65%;
+    --border: 20 30% 40%;
+    --input: 20 30% 40%;
+    --ring: 15 90% 70%;
 
     /* Dark mode gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
