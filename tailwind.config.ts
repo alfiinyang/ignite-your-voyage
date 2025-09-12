@@ -58,6 +58,12 @@ export default {
 					light: 'hsl(var(--accent-light))',
 					hover: 'hsl(var(--accent-hover))'
 				},
+				tertiary: {
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))',
+					light: 'hsl(var(--tertiary-light))',
+					hover: 'hsl(var(--tertiary-hover))'
+				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
