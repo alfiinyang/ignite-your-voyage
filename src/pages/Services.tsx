@@ -3,8 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Calendar, Clock, Users, Target, BookOpen, TrendingUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
+  
   const services = [
     {
       icon: <Target className="h-8 w-8" />,
@@ -12,7 +15,8 @@ const Services = () => {
       description: "Personalized guidance to discover your career path and achieve your professional goals.",
       features: ["Career assessment", "Goal setting", "Action planning", "Ongoing support"],
       price: "Starting at $150/session",
-      duration: "60-90 minutes"
+      duration: "60-90 minutes",
+      serviceId: "1on1"
     },
     {
       icon: <Users className="h-8 w-8" />,
@@ -20,7 +24,8 @@ const Services = () => {
       description: "Connect with peers while receiving professional guidance in a supportive environment.",
       features: ["Peer networking", "Group exercises", "Shared learning", "Cost-effective"],
       price: "Starting at $75/session",
-      duration: "90 minutes"
+      duration: "90 minutes",
+      serviceId: "group"
     },
     {
       icon: <BookOpen className="h-8 w-8" />,
@@ -28,7 +33,8 @@ const Services = () => {
       description: "Intensive 8-week program designed to transform your career trajectory completely.",
       features: ["Weekly workshops", "Personal action plan", "Resume optimization", "Interview prep"],
       price: "$997 (8 weeks)",
-      duration: "2 hours/week"
+      duration: "2 hours/week",
+      serviceId: "bootcamp"
     },
     {
       icon: <TrendingUp className="h-8 w-8" />,
@@ -36,9 +42,14 @@ const Services = () => {
       description: "Professional review and enhancement of your resume and LinkedIn profile.",
       features: ["ATS optimization", "Keyword research", "Professional branding", "Cover letter"],
       price: "Starting at $299",
-      duration: "1-2 weeks delivery"
+      duration: "1-2 weeks delivery",
+      serviceId: "resume"
     }
   ];
+
+  const handleBookNow = (serviceId: string) => {
+    navigate('/contact', { state: { selectedService: serviceId } });
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -139,7 +150,11 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button className="w-full" variant="hero">
+                  <Button 
+                    className="w-full" 
+                    variant="hero"
+                    onClick={() => handleBookNow(service.serviceId)}
+                  >
                     Book Now
                   </Button>
                 </CardContent>

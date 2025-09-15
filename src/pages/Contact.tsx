@@ -6,9 +6,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Contact = () => {
+  const location = useLocation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,6 +19,16 @@ const Contact = () => {
     service: "",
     message: ""
   });
+
+  // Pre-select service if coming from services page
+  useEffect(() => {
+    if (location.state?.selectedService) {
+      setFormData(prev => ({
+        ...prev,
+        service: location.state.selectedService
+      }));
+    }
+  }, [location.state]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
