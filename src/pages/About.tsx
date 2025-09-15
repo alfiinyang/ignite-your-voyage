@@ -40,7 +40,6 @@ const About = () => {
                     alt="Sarah Johnson, Career Coach"
                     className="w-full h-auto"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
                 </div>
                 
                 {/* Floating Credentials */}
