@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -183,16 +184,14 @@ const Testimonials = () => {
               Join hundreds of professionals who have transformed their careers. 
               Your success story could be next.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-smooth font-semibold">
-                Start Your Journey
-              </button>
-              <button 
-                className="px-8 py-3 border border-border rounded-lg hover:bg-card transition-smooth font-semibold text-foreground"
+            <div className="flex justify-center">
+              <Button 
+                size="lg"
+                className="px-8 py-3 font-semibold"
                 onClick={handleScheduleConsultation}
               >
                 Schedule Free Consultation
-              </button>
+              </Button>
             </div>
           </div>
         </div>
