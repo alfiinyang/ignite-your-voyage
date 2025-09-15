@@ -3,8 +3,15 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Star, Quote } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Testimonials = () => {
+  const navigate = useNavigate();
+
+  const handleScheduleConsultation = () => {
+    navigate('/contact', { state: { selectedService: 'consultation' } });
+  };
+
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -180,7 +187,10 @@ const Testimonials = () => {
               <button className="px-8 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-smooth font-semibold">
                 Start Your Journey
               </button>
-              <button className="px-8 py-3 border border-border rounded-lg hover:bg-card transition-smooth font-semibold text-foreground">
+              <button 
+                className="px-8 py-3 border border-border rounded-lg hover:bg-card transition-smooth font-semibold text-foreground"
+                onClick={handleScheduleConsultation}
+              >
                 Schedule Free Consultation
               </button>
             </div>
