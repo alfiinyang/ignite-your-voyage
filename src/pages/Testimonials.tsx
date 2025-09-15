@@ -10,7 +10,7 @@ const Testimonials = () => {
   const navigate = useNavigate();
 
   const handleScheduleConsultation = () => {
-    navigate('/contact', { state: { selectedService: 'consultation' } });
+    navigate('/contact#contact-form', { state: { selectedService: 'consultation' } });
   };
 
   const testimonials = [
