@@ -14,7 +14,7 @@ const CoachPreview = () => {
               <img 
                 src={coachPhoto} 
                 alt="Professional career coach headshot"
-                className="w-full h-auto"
+                className="w-full h-96 object-cover object-top"
               />
               
             </div>
