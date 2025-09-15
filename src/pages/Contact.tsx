@@ -5,8 +5,57 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: ""
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in all required fields marked with *",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Simulate form submission
+    toast({
+      title: "Message Sent Successfully!",
+      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+    });
+
+    // Reset form
+    setFormData({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: ""
+    });
+  };
+
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6" />,
@@ -72,7 +121,7 @@ const Contact = () => {
               
               <Card className="bg-card border-border shadow-elegant">
                 <CardContent className="p-6">
-                  <form className="space-y-6">
+                  <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
@@ -82,6 +131,9 @@ const Contact = () => {
                           id="firstName"
                           placeholder="John"
                           className="bg-background border-border"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
                       <div>
@@ -92,6 +144,9 @@ const Contact = () => {
                           id="lastName"
                           placeholder="Smith"
                           className="bg-background border-border"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
+                          required
                         />
                       </div>
                     </div>
@@ -105,6 +160,9 @@ const Contact = () => {
                         type="email"
                         placeholder="john@example.com"
                         className="bg-background border-border"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                     
@@ -117,6 +175,8 @@ const Contact = () => {
                         type="tel"
                         placeholder="+1 (555) 123-4567"
                         className="bg-background border-border"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                       />
                     </div>
                     
@@ -127,6 +187,8 @@ const Contact = () => {
                       <select 
                         id="service"
                         className="w-full px-3 py-2 bg-background border border-border rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+                        value={formData.service}
+                        onChange={handleInputChange}
                       >
                         <option value="">Select a service</option>
                         <option value="1on1">1-on-1 Career Coaching</option>
@@ -146,10 +208,13 @@ const Contact = () => {
                         placeholder="Tell us about your current situation, career goals, and any specific challenges you're facing..."
                         rows={5}
                         className="bg-background border-border"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                     
-                    <Button className="w-full" variant="hero">
+                    <Button type="submit" className="w-full" variant="hero">
                       <Send className="h-4 w-4 mr-2" />
                       Send Message
                     </Button>
