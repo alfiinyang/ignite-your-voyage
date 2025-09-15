@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Target } from "lucide-react";
 import { Link } from "react-router-dom";
-import coachPhoto from "@/assets/coach-photo.jpg";
+import coachPhoto from "@/assets/coach-photo-new.jpg";
 
 const CoachPreview = () => {
   return (
