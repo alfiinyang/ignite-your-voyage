@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Award, Heart, Target, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import coachPhoto from "@/assets/coach-photo.jpg";
+import coachPhoto from "@/assets/coach-photo-new.jpg";
 
 const About = () => {
   return (
