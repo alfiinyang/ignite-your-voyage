@@ -61,6 +61,46 @@ const Services = () => {
         </div>
       </section>
 
+      {/* Process Section */}
+      <section className="py-16 section-light">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
+              How It Works
+            </h2>
+            <p className="text-lg text-navy italic">
+              Our proven process ensures you get maximum value from every session
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
+                1
+              </div>
+              <h3 className="text-xl font-semibold text-navy mb-3">Assessment</h3>
+              <p className="text-navy italic">We start with a comprehensive evaluation of your current situation and goals.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
+                2
+              </div>
+              <h3 className="text-xl font-semibold text-navy mb-3">Strategy</h3>
+              <p className="text-navy italic">Together, we create a personalized action plan tailored to your unique path.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
+                3
+              </div>
+              <h3 className="text-xl font-semibold text-navy mb-3">Execution</h3>
+              <p className="text-navy italic">We work together to implement your plan with ongoing support and accountability.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
@@ -109,45 +149,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-16 section-light">
-        <div className="container mx-auto px-6">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy mb-6">
-              How It Works
-            </h2>
-            <p className="text-lg text-navy italic">
-              Our proven process ensures you get maximum value from every session
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-semibold text-navy mb-3">Assessment</h3>
-              <p className="text-navy italic">We start with a comprehensive evaluation of your current situation and goals.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-navy mb-3">Strategy</h3>
-              <p className="text-navy italic">Together, we create a personalized action plan tailored to your unique path.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-xl mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-navy mb-3">Execution</h3>
-              <p className="text-navy italic">We work together to implement your plan with ongoing support and accountability.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
