@@ -10,7 +10,7 @@ const CoachPreview = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-card">
+            <div className="relative rounded-2xl overflow-hidden shadow-card py-20">
               <img 
                 src={coachPhoto} 
                 alt="Professional career coach headshot"
