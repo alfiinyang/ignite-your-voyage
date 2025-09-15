@@ -48,7 +48,7 @@ const Services = () => {
   ];
 
   const handleBookNow = (serviceId: string) => {
-    navigate('/contact', { state: { selectedService: serviceId } });
+    navigate('/contact#contact-form', { state: { selectedService: serviceId } });
   };
 
   return (

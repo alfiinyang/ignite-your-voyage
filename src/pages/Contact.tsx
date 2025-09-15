@@ -28,7 +28,17 @@ const Contact = () => {
         service: location.state.selectedService
       }));
     }
-  }, [location.state]);
+    
+    // Scroll to form if hash is present
+    if (location.hash === '#contact-form') {
+      setTimeout(() => {
+        const formElement = document.getElementById('contact-form');
+        if (formElement) {
+          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location.state, location.hash]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -131,7 +141,7 @@ const Contact = () => {
                 Tell us about your career goals and challenges.
               </p>
               
-              <Card className="bg-card border-border shadow-elegant">
+              <Card id="contact-form" className="bg-card border-border shadow-elegant">
                 <CardContent className="p-6">
                   <form className="space-y-6" onSubmit={handleSubmit}>
                     <div className="grid md:grid-cols-2 gap-4">
