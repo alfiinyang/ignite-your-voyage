@@ -16,7 +16,7 @@ const CoachPreview = () => {
                 alt="Professional career coach headshot"
                 className="w-full h-auto"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
+              
             </div>
             
             {/* Floating Stats */}
