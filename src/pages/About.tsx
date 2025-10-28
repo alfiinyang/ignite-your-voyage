@@ -37,7 +37,7 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-card">
                   <img 
                     src={coachPhoto} 
-                    alt="Sarah Johnson, Career Coach"
+                    alt="Annie Opusunju, Career Coach"
                     className="w-full h-auto"
                   />
                 </div>
@@ -51,7 +51,7 @@ const About = () => {
                 </div>
                 
                 <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-card border">
-                  <div className="text-2xl font-bold text-secondary">8</div>
+                  <div className="text-2xl font-bold text-secondary">10</div>
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
               </div>
@@ -59,30 +59,31 @@ const About = () => {
               {/* Content Side */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-4xl font-bold mb-4">Meet Sarah Johnson</h2>
+                  <h2 className="text-4xl font-bold mb-4">Meet Annie Opusunju</h2>
                   <p className="text-xl text-primary font-semibold mb-6">
-                    Certified Career Coach & Young Adult Specialist
+                    Certified Project Manager, Scrum Master & Career Coach
                   </p>
                 </div>
 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    I still remember the overwhelming feeling of graduating college and having 
-                    absolutely no idea what came next. Despite having a degree, I felt completely 
-                    unprepared for the "real world" and the pressure to figure out my entire future.
+                    With a decade of experience in the academic field, I am dedicated to empowering 
+                    both teenagers and adults in their career journeys. My extensive background includes 
+                    serving as a senior visa decision maker and analyst for the UK government, providing 
+                    me with invaluable insights into international relations and human social dynamics.
                   </p>
                   
                   <p>
-                    That experience of uncertainty, anxiety, and eventual breakthrough shaped my 
-                    passion for helping other young adults navigate this critical transition period. 
-                    After stumbling through my own career journey, I discovered the power of 
-                    structured self-discovery and strategic planning.
+                    Fluent in multiple languages and trained across various European countries, I excel 
+                    in fostering cross-cultural understanding and communication. This multicultural 
+                    perspective allows me to connect with clients from diverse backgrounds and help them 
+                    navigate their unique career challenges.
                   </p>
                   
                   <p>
-                    For the past 8 years, I've specialized in working exclusively with recent 
-                    graduates and young professionals. I've helped over 500 individuals transform 
-                    their career confusion into clarity and confidence.
+                    As a certified project manager and scrum master, I utilise structured, agile 
+                    methodologies to ensure a productive and engaging learning environment, guiding 
+                    each participant toward their unique career goals with clarity and purpose.
                   </p>
                 </div>
 
@@ -169,34 +170,34 @@ const About = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  title: "ICF Certified Coach",
-                  description: "Professional Certified Coach (PCC) credential from the International Coaching Federation",
-                  year: "2019"
+                  title: "Certified Project Manager",
+                  description: "Professional project management certification with expertise in delivering complex initiatives",
+                  year: "Certified"
                 },
                 {
-                  title: "M.A. Counseling Psychology",
-                  description: "Master's degree with specialization in career development and young adult transitions",
-                  year: "2016"
+                  title: "Certified Scrum Master",
+                  description: "Agile methodology expert utilizing structured frameworks for career development",
+                  year: "Certified"
                 },
                 {
-                  title: "MBTI Certification",
-                  description: "Certified practitioner of Myers-Briggs Type Indicator for personality assessment",
-                  year: "2018"
+                  title: "UK Government Analyst",
+                  description: "Senior visa decision maker and analyst with deep insights into international relations",
+                  year: "10+ Years"
                 },
                 {
-                  title: "StrengthsFinder Coach",
-                  description: "Gallup-certified coach for CliftonStrengths assessment and development",
-                  year: "2020"
+                  title: "Multilingual Professional",
+                  description: "Fluent in multiple languages, fostering cross-cultural understanding and communication",
+                  year: "Ongoing"
                 },
                 {
-                  title: "Career Leader Certification",
-                  description: "Specialized certification in career assessment and exploration tools",
-                  year: "2021"
+                  title: "European Training",
+                  description: "Trained across various European countries in career coaching and development methodologies",
+                  year: "International"
                 },
                 {
-                  title: "Ongoing Education",
-                  description: "Regular training in emerging career trends and coaching methodologies",
-                  year: "Continuous"
+                  title: "Academic Experience",
+                  description: "Decade of experience empowering teenagers and adults in their educational and career paths",
+                  year: "10 Years"
                 }
               ].map((credential, index) => (
                 <Card key={index} className="shadow-soft">
@@ -224,23 +225,23 @@ const About = () => {
               <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
                 <p>
                   <strong className="text-foreground">
-                    "I believe that your twenties should be a time of exploration and growth, 
-                    not paralyzing anxiety about making the 'perfect' choice."
+                    "Career development is not just about finding a job—it's about discovering 
+                    your unique path and building the skills to navigate it successfully."
                   </strong>
                 </p>
                 
                 <p>
-                  When I work with clients, I'm not just their coach—I'm their advocate, 
-                  cheerleader, and strategic partner. I've been where you are, and I know 
-                  that with the right guidance and support, this uncertain time can become 
-                  the foundation for an incredible career.
+                  When I work with clients, I bring a unique blend of international perspective, 
+                  structured methodology, and genuine passion for their success. My experience across 
+                  cultures and industries allows me to provide insights that go beyond traditional 
+                  career coaching, helping you develop the adaptability and confidence needed in 
+                  today's global workplace.
                 </p>
                 
                 <p>
-                  Outside of coaching, I'm an avid hiker, coffee enthusiast, and lifelong 
-                  learner. I live in Colorado with my partner and our rescue dog, Bailey. 
-                  I'm passionate about sustainability, travel, and helping young adults 
-                  build careers they love while making a positive impact on the world.
+                  I'm committed to creating an engaging, productive learning environment where each 
+                  individual can explore their potential and chart a course toward their career goals 
+                  with clarity, confidence, and purpose.
                 </p>
               </div>
 

@@ -40,16 +40,16 @@ const CoachPreview = () => {
               </h2>
               
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Hi, I'm Sarah Johnson, and I've spent the last 8 years helping young adults 
-                like you navigate the transition from education to meaningful careers.
+                Hi, I'm Annie Opusunju, and I've dedicated a decade to empowering both teenagers 
+                and adults in their career journeys.
               </p>
             </div>
 
             <div className="space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I remember being 22, fresh out of college, and feeling completely overwhelmed 
-                by the "real world." That's why I became passionate about creating a clear, 
-                supportive path for the next generation.
+                With extensive experience as a senior visa decision maker and analyst for the UK government, 
+                I bring invaluable insights into international relations and human social dynamics to help you 
+                navigate your career path with confidence.
               </p>
             </div>
 
@@ -66,7 +66,7 @@ const CoachPreview = () => {
               <div className="flex items-center gap-3 p-4 bg-muted/50 rounded-xl">
                 <Users className="text-secondary" size={24} />
                 <div>
-                  <div className="font-semibold text-sm">8 Years</div>
+                  <div className="font-semibold text-sm">10 Years</div>
                   <div className="text-xs text-muted-foreground">Experience</div>
                 </div>
               </div>
