@@ -82,14 +82,14 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "hello@unborderedpath.com",
+      details: "annieoous1@gmail.com",
       description: "Send us an email anytime"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9AM-6PM EST"
+      details: "+44 7730 466665",
+      description: "Mon-Fri 9AM-6PM GMT"
     },
     {
       icon: <MapPin className="h-6 w-6" />,
