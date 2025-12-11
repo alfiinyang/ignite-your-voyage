@@ -40,6 +40,18 @@ const Contact = () => {
     }
   }, [location.state, location.hash]);
 
+  // Load Calendly widget script
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormData(prev => ({
@@ -329,13 +341,10 @@ const Contact = () => {
           </div>
           
           <div className="max-w-4xl mx-auto bg-card rounded-xl shadow-elegant overflow-hidden border border-border">
-            <iframe
-              src="https://calendly.com/alfiinyang?hide_gdpr_banner=1"
-              width="100%"
-              height="700"
-              frameBorder="0"
-              title="Schedule a consultation"
-              className="w-full"
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/alfiinyang?hide_landing_page_details=1&hide_gdpr_banner=1" 
+              style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
         </div>
