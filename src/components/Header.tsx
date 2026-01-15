@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,8 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <h1 className="text-2xl font-bold text-primary">Unbordered Path</h1>
+            <img src={logo} alt="The Unbordered Path" className="h-10 w-auto" />
+            <h1 className="text-2xl font-bold text-primary">The Unbordered Path</h1>
           </Link>
 
           {/* Desktop Navigation */}
