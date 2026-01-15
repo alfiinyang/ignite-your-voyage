@@ -343,7 +343,7 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto bg-card rounded-xl shadow-elegant overflow-hidden border border-border">
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/alfiinyang?hide_landing_page_details=1&hide_gdpr_banner=1" 
+              data-url="https://calendly.com/annestlabelle?hide_landing_page_details=1&hide_gdpr_banner=1" 
               style={{ minWidth: '320px', height: '700px' }}
             />
           </div>
