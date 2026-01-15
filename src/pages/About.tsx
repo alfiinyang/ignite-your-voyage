@@ -37,7 +37,7 @@ const About = () => {
                 <div className="relative rounded-2xl overflow-hidden shadow-card">
                   <img 
                     src={coachPhoto} 
-                    alt="Annie Opusunju, Career Coach"
+                    alt="Annie Inyang, Career Coach"
                     className="w-full h-auto"
                   />
                 </div>
@@ -59,7 +59,7 @@ const About = () => {
               {/* Content Side */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-4xl font-bold mb-4">Meet Annie Opusunju</h2>
+                  <h2 className="text-4xl font-bold mb-4">Meet Annie Inyang</h2>
                   <p className="text-xl text-primary font-semibold mb-6">
                     Certified Project Manager, Scrum Master & Career Coach
                   </p>
