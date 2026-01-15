@@ -40,7 +40,7 @@ const CoachPreview = () => {
               </h2>
               
               <p className="text-xl text-muted-foreground leading-relaxed">
-                Hi, I'm Annie Opusunju, and I've dedicated a decade to empowering both teenagers 
+                Hi, I'm Annie Inyang, and I've dedicated a decade to empowering both teenagers 
                 and adults in their career journeys.
               </p>
             </div>
