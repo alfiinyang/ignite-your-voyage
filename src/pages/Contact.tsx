@@ -1,44 +1,21 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Clock, Send, Calendar } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Mail, Phone, MapPin, Clock, Calendar } from "lucide-react";
+import { useEffect } from "react";
 
 const Contact = () => {
-  const location = useLocation();
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: ""
-  });
-
-  // Pre-select service if coming from services page
+  // Load HubSpot form script
   useEffect(() => {
-    if (location.state?.selectedService) {
-      setFormData(prev => ({
-        ...prev,
-        service: location.state.selectedService
-      }));
-    }
-    
-    // Scroll to form if hash is present
-    if (location.hash === '#contact-form') {
-      setTimeout(() => {
-        const formElement = document.getElementById('contact-form');
-        if (formElement) {
-          formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
-  }, [location.state, location.hash]);
+    const hubspotScript = document.createElement('script');
+    hubspotScript.src = 'https://js-eu1.hsforms.net/forms/embed/147618081.js';
+    hubspotScript.defer = true;
+    document.body.appendChild(hubspotScript);
+
+    return () => {
+      document.body.removeChild(hubspotScript);
+    };
+  }, []);
 
   // Load Calendly widget script
   useEffect(() => {
@@ -51,44 +28,6 @@ const Contact = () => {
       document.body.removeChild(script);
     };
   }, []);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { id, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [id]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Basic validation
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.message) {
-      toast({
-        title: "Missing Information",
-        description: "Please fill in all required fields marked with *",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    // Simulate form submission
-    toast({
-      title: "Message Sent Successfully!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
-    });
-
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      service: "",
-      message: ""
-    });
-  };
 
   const contactInfo = [
     {
@@ -155,104 +94,12 @@ const Contact = () => {
               
               <Card id="contact-form" className="bg-card border-border shadow-elegant">
                 <CardContent className="p-6">
-                  <form className="space-y-6" onSubmit={handleSubmit}>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="firstName" className="block text-sm font-medium text-foreground mb-2">
-                          First Name *
-                        </label>
-                        <Input 
-                          id="firstName"
-                          placeholder="John"
-                          className="bg-background border-border"
-                          value={formData.firstName}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                      <div>
-                        <label htmlFor="lastName" className="block text-sm font-medium text-foreground mb-2">
-                          Last Name *
-                        </label>
-                        <Input 
-                          id="lastName"
-                          placeholder="Smith"
-                          className="bg-background border-border"
-                          value={formData.lastName}
-                          onChange={handleInputChange}
-                          required
-                        />
-                      </div>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                        Email Address *
-                      </label>
-                      <Input 
-                        id="email"
-                        type="email"
-                        placeholder="john@example.com"
-                        className="bg-background border-border"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                        Phone Number
-                      </label>
-                      <Input 
-                        id="phone"
-                        type="tel"
-                        placeholder="+1 (555) 123-4567"
-                        className="bg-background border-border"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="service" className="block text-sm font-medium text-foreground mb-2">
-                        Service Interest
-                      </label>
-                      <select 
-                        id="service"
-                        className="w-full px-3 py-2 bg-background border border-border rounded-md text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
-                        value={formData.service}
-                        onChange={handleInputChange}
-                      >
-                        <option value="">Select a service</option>
-                        <option value="1on1">1-on-1 Career Coaching</option>
-                        <option value="group">Group Coaching</option>
-                        <option value="bootcamp">Career Bootcamp</option>
-                        <option value="resume">Resume Optimization</option>
-                        <option value="consultation">Free Consultation</option>
-                      </select>
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                        Message *
-                      </label>
-                      <Textarea 
-                        id="message"
-                        placeholder="Tell us about your current situation, career goals, and any specific challenges you're facing..."
-                        rows={5}
-                        className="bg-background border-border"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </div>
-                    
-                    <Button type="submit" className="w-full" variant="hero">
-                      <Send className="h-4 w-4 mr-2" />
-                      Send Message
-                    </Button>
-                  </form>
+                  <div 
+                    className="hs-form-frame" 
+                    data-region="eu1" 
+                    data-form-id="bd46be24-cabe-4408-836b-e98f284f29c0" 
+                    data-portal-id="147618081"
+                  />
                 </CardContent>
               </Card>
             </div>
