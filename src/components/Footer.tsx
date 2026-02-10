@@ -1,128 +1,127 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="bg-foreground text-background/80">
+      <div className="container mx-auto px-6 pt-16 pb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
-          <div className="space-y-4">
-            <h3 className="text-2xl font-bold text-primary">Unbordered Path</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Empowering young adults to navigate their career journey with confidence and clarity.
+          <div className="lg:col-span-1 space-y-4">
+            <Link to="/" className="flex items-center gap-2.5">
+              <img src={logo} alt="The Unbordered Path" className="h-8 w-auto brightness-200" />
+              <span className="text-lg font-heading font-bold text-background">
+                The Unbordered Path
+              </span>
+            </Link>
+            <p className="text-sm leading-relaxed text-background/60">
+              Empowering young adults to navigate career transitions with
+              confidence, clarity, and purpose.
             </p>
-            <div className="flex gap-4">
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-smooth"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-smooth"
+            <div className="flex gap-3 pt-2">
+              <a
+                href="#"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={16} />
               </a>
-              <a 
-                href="#" 
-                className="text-muted-foreground hover:text-primary transition-smooth"
-                aria-label="Facebook"
+              <a
+                href="#"
+                className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
+                aria-label="Instagram"
               >
-                <Facebook size={20} />
+                <Instagram size={16} />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Quick Links</h4>
-            <nav className="flex flex-col space-y-2">
-              <Link to="/" className="text-muted-foreground hover:text-primary transition-smooth">
-                Home
-              </Link>
-              <Link to="/about" className="text-muted-foreground hover:text-primary transition-smooth">
-                About Us
-              </Link>
-              <Link to="/services" className="text-muted-foreground hover:text-primary transition-smooth">
-                Services
-              </Link>
-              <Link to="/testimonials" className="text-muted-foreground hover:text-primary transition-smooth">
-                Testimonials
-              </Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-smooth">
-                Contact
-              </Link>
-            </nav>
-          </div>
+          <nav className="space-y-3" aria-label="Footer navigation">
+            <h4 className="text-sm font-heading font-semibold text-background uppercase tracking-wider">
+              Navigate
+            </h4>
+            <div className="flex flex-col gap-2">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About" },
+                { to: "/services", label: "Services" },
+                { to: "/testimonials", label: "Testimonials" },
+                { to: "/contact", label: "Contact" },
+              ].map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </nav>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Our Services</h4>
-            <div className="flex flex-col space-y-2">
-              <Link to="/services" className="text-muted-foreground hover:text-primary transition-smooth">
-                1:1 Coaching
-              </Link>
-              <Link to="/services" className="text-muted-foreground hover:text-primary transition-smooth">
-                Group Coaching
-              </Link>
-              <Link to="/services" className="text-muted-foreground hover:text-primary transition-smooth">
-                Ignite Your Future Bootcamp
-              </Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-smooth">
-                Free Consultation
-              </Link>
+          <div className="space-y-3">
+            <h4 className="text-sm font-heading font-semibold text-background uppercase tracking-wider">
+              Services
+            </h4>
+            <div className="flex flex-col gap-2">
+              {[
+                "1:1 Career Coaching",
+                "Group Coaching",
+                "Ignite Your Future Bootcamp",
+                "Resume & LinkedIn Optimization",
+                "Free Consultation",
+              ].map((service) => (
+                <Link
+                  key={service}
+                  to="/services"
+                  className="text-sm text-background/60 hover:text-background transition-colors"
+                >
+                  {service}
+                </Link>
+              ))}
             </div>
           </div>
 
           {/* Contact */}
-          <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Get in Touch</h4>
+          <div className="space-y-3">
+            <h4 className="text-sm font-heading font-semibold text-background uppercase tracking-wider">
+              Get in Touch
+            </h4>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Mail size={16} />
-                <a 
-                  href="mailto:annieoous1@gmail.com"
-                  className="hover:text-primary transition-smooth"
-                >
-                  annieoous1@gmail.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Phone size={16} />
-                <a 
-                  href="tel:+447730466665"
-                  className="hover:text-primary transition-smooth"
-                >
-                  +44 7730 466665
-                </a>
-              </div>
-              <div className="flex items-start gap-3 text-muted-foreground">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>
-                  Virtual sessions available<br />
-                  Serving clients nationwide
-                </span>
+              <a
+                href="mailto:annieoous1@gmail.com"
+                className="flex items-center gap-2.5 text-sm text-background/60 hover:text-background transition-colors"
+              >
+                <Mail size={14} className="flex-shrink-0" />
+                annieoous1@gmail.com
+              </a>
+              <a
+                href="tel:+447730466665"
+                className="flex items-center gap-2.5 text-sm text-background/60 hover:text-background transition-colors"
+              >
+                <Phone size={14} className="flex-shrink-0" />
+                +44 7730 466665
+              </a>
+              <div className="flex items-start gap-2.5 text-sm text-background/60">
+                <MapPin size={14} className="flex-shrink-0 mt-0.5" />
+                <span>Remote & worldwide</span>
               </div>
             </div>
           </div>
         </div>
 
-        <hr className="my-8 border-border" />
-
-        {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © 2024 Unbordered Path. All rights reserved.
+        <div className="border-t border-background/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs text-background/40">
+            © {new Date().getFullYear()} The Unbordered Path. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm">
-            <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-smooth">
+          <div className="flex gap-6 text-xs text-background/40">
+            <Link to="/privacy" className="hover:text-background/80 transition-colors">
               Privacy Policy
             </Link>
-            <Link to="/terms" className="text-muted-foreground hover:text-primary transition-smooth">
+            <Link to="/terms" className="hover:text-background/80 transition-colors">
               Terms of Service
             </Link>
           </div>
