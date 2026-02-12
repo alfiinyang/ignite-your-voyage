@@ -7,13 +7,24 @@ import { useEffect } from "react";
 const Contact = () => {
   // Load HubSpot form script
   useEffect(() => {
+    const existingScript = document.querySelector(
+      'script[src="https://js-eu1.hsforms.net/forms/embed/147618081.js"]'
+    );
+    if (existingScript) {
+      // Script already loaded — re-trigger embed processing
+      const container = document.querySelector('.hs-form-frame');
+      if (container && (window as any).hsFormsOnReady) {
+        (window as any).hsFormsOnReady();
+      }
+      return;
+    }
+
     const hubspotScript = document.createElement("script");
     hubspotScript.src = "https://js-eu1.hsforms.net/forms/embed/147618081.js";
     hubspotScript.defer = true;
     document.body.appendChild(hubspotScript);
-    return () => {
-      document.body.removeChild(hubspotScript);
-    };
+
+    // Don't remove script on unmount — it needs to stay for re-navigation
   }, []);
 
   // Load Calendly widget script
