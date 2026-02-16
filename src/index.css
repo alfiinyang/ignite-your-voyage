@@ -24,26 +24,26 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    /* ── Brand Colors ── */
-    --primary: 231 76% 60%;          /* Indigo-blue #4361EE */
+    /* ── Brand Colors (matched to logo) ── */
+    --primary: 24 92% 53%;            /* Warm orange #F28118 */
     --primary-foreground: 0 0% 100%;
-    --primary-light: 231 76% 70%;
-    --primary-glow: 231 76% 80%;
+    --primary-light: 24 92% 63%;
+    --primary-glow: 24 92% 73%;
 
-    --secondary: 162 84% 35%;        /* Teal-green #0E9F6E */
+    --secondary: 174 72% 38%;         /* Teal #1BA89C */
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 162 70% 45%;
-    --secondary-hover: 162 70% 45%;
+    --secondary-light: 174 60% 48%;
+    --secondary-hover: 174 60% 48%;
 
-    --accent: 14 90% 58%;            /* Warm coral #F06543 */
+    --accent: 36 95% 50%;             /* Amber-gold #F5A800 */
     --accent-foreground: 0 0% 100%;
-    --accent-light: 14 90% 68%;
-    --accent-hover: 14 90% 52%;
+    --accent-light: 36 95% 60%;
+    --accent-hover: 36 95% 44%;
 
-    --tertiary: 45 93% 47%;          /* Gold #E8A317 */
-    --tertiary-foreground: 222 47% 11%;
-    --tertiary-light: 45 93% 57%;
-    --tertiary-hover: 45 93% 42%;
+    --tertiary: 198 70% 42%;          /* Ocean blue #2183AB */
+    --tertiary-foreground: 0 0% 100%;
+    --tertiary-light: 198 70% 52%;
+    --tertiary-hover: 198 70% 37%;
 
     /* ── UI ── */
     --muted: 220 14% 96%;
@@ -54,18 +54,18 @@
 
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 231 76% 60%;
+    --ring: 24 92% 53%;
 
     /* ── Gradients ── */
-    --gradient-hero: linear-gradient(135deg, hsl(231 76% 60%), hsl(262 70% 55%));
-    --gradient-success: linear-gradient(135deg, hsl(162 84% 35%), hsl(162 70% 45%));
-    --gradient-accent: linear-gradient(135deg, hsl(14 90% 58%), hsl(25 95% 55%));
-    --gradient-tertiary: linear-gradient(135deg, hsl(45 93% 47%), hsl(35 90% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(24 92% 53%), hsl(36 95% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(174 72% 38%), hsl(174 60% 48%));
+    --gradient-accent: linear-gradient(135deg, hsl(36 95% 50%), hsl(24 92% 53%));
+    --gradient-tertiary: linear-gradient(135deg, hsl(198 70% 42%), hsl(198 70% 52%));
 
     /* ── Shadows ── */
     --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.06), 0 1px 2px -1px hsl(0 0% 0% / 0.06);
     --shadow-card: 0 4px 24px -4px hsl(0 0% 0% / 0.08);
-    --shadow-glow: 0 8px 40px -8px hsl(231 76% 60% / 0.18);
+    --shadow-glow: 0 8px 40px -8px hsl(24 92% 53% / 0.18);
     --shadow-elegant: 0 2px 12px -2px hsl(0 0% 0% / 0.06);
 
     /* ── Motion ── */
@@ -93,23 +93,23 @@
     --popover: 222 40% 12%;
     --popover-foreground: 210 20% 98%;
 
-    --primary: 231 80% 68%;
+    --primary: 24 92% 63%;
     --primary-foreground: 222 47% 8%;
-    --primary-light: 231 80% 78%;
-    --primary-glow: 231 80% 88%;
+    --primary-light: 24 92% 73%;
+    --primary-glow: 24 92% 83%;
 
-    --secondary: 162 70% 50%;
+    --secondary: 174 60% 50%;
     --secondary-foreground: 222 47% 8%;
-    --secondary-light: 162 60% 60%;
+    --secondary-light: 174 50% 60%;
 
-    --accent: 14 85% 65%;
+    --accent: 36 90% 58%;
     --accent-foreground: 222 47% 8%;
-    --accent-light: 14 85% 75%;
+    --accent-light: 36 90% 68%;
 
-    --tertiary: 45 90% 55%;
+    --tertiary: 198 65% 52%;
     --tertiary-foreground: 222 47% 8%;
-    --tertiary-light: 45 90% 65%;
-    --tertiary-hover: 45 90% 50%;
+    --tertiary-light: 198 65% 62%;
+    --tertiary-hover: 198 65% 47%;
 
     --muted: 220 20% 18%;
     --muted-foreground: 220 15% 65%;
@@ -119,7 +119,7 @@
 
     --border: 220 20% 22%;
     --input: 220 20% 22%;
-    --ring: 231 80% 68%;
+    --ring: 24 92% 63%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
     --gradient-success: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
