@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Users } from "lucide-react";
 import { Link } from "react-router-dom";
-import BookingModal from "@/components/BookingModal";
+
+const BookingModal = lazy(() => import("@/components/BookingModal"));
 
 const FinalCTA = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -82,11 +83,15 @@ const FinalCTA = () => {
         </div>
       </section>
 
-      <BookingModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        serviceName={selectedService}
-      />
+      {modalOpen && (
+        <Suspense fallback={null}>
+          <BookingModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            serviceName={selectedService}
+          />
+        </Suspense>
+      )}
     </>
   );
 };

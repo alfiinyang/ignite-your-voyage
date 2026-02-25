@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react";
+import { lazy, Suspense, useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, Clock, Users, ArrowRight, CheckCircle } from "lucide-react";
-import BookingModal from "@/components/BookingModal";
+
+const BookingModal = lazy(() => import("@/components/BookingModal"));
 
 const BootcampHighlight = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -156,11 +157,15 @@ const BootcampHighlight = () => {
         </div>
       </section>
 
-      <BookingModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        serviceName="Ignite Your Future Bootcamp"
-      />
+      {modalOpen && (
+        <Suspense fallback={null}>
+          <BookingModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            serviceName="Ignite Your Future Bootcamp"
+          />
+        </Suspense>
+      )}
     </>
   );
 };

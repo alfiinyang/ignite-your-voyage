@@ -1,11 +1,12 @@
 // services snapshot component for homepage
 // services snapshot component for homepage
-import { useState } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, User, Zap, Clock, ArrowRight, Check } from "lucide-react";
 import { Link } from "react-router-dom";
-import BookingModal from "./BookingModal";
+
+const BookingModal = lazy(() => import("./BookingModal"));
 
 const ServicesSnapshot = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -147,11 +148,15 @@ const ServicesSnapshot = () => {
         </div>
       </section>
 
-      <BookingModal
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-        serviceName={selectedService}
-      />
+      {modalOpen && (
+        <Suspense fallback={null}>
+          <BookingModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            serviceName={selectedService}
+          />
+        </Suspense>
+      )}
     </>
   );
 };

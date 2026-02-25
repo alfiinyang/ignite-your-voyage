@@ -11,7 +11,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -40,7 +40,7 @@ const Header = () => {
               alt="The Unbordered Path logo"
               className="h-9 w-auto"
             />
-            <span className="text-lg font-heading font-bold text-foreground group-hover:text-primary transition-colors">
+            <span className="hidden sm:inline text-lg font-heading font-bold text-foreground group-hover:text-primary transition-colors">
               The Unbordered Path
             </span>
           </Link>

@@ -19,12 +19,12 @@ const CoachPreview = () => {
               />
             </div>
 
-            <div className="absolute -top-5 -right-5 bg-card p-4 rounded-xl shadow-card border border-border">
+            <div className="hidden sm:block absolute -top-5 -right-5 bg-card p-4 rounded-xl shadow-card border border-border">
               <div className="text-2xl font-bold text-primary">500+</div>
               <div className="text-xs text-muted-foreground">Young Adults Guided</div>
             </div>
 
-            <div className="absolute -bottom-5 -left-5 bg-card p-4 rounded-xl shadow-card border border-border">
+            <div className="hidden sm:block absolute -bottom-5 -left-5 bg-card p-4 rounded-xl shadow-card border border-border">
               <div className="text-2xl font-bold text-secondary">95%</div>
               <div className="text-xs text-muted-foreground">Success Rate</div>
             </div>

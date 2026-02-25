@@ -37,11 +37,11 @@ const Challenge = () => {
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-3 -right-3 bg-accent text-accent-foreground px-4 py-2 rounded-lg text-sm font-semibold shadow-card">
+            <div className="hidden sm:block absolute -top-3 -right-3 bg-accent text-accent-foreground px-4 py-2 rounded-lg text-sm font-semibold shadow-card">
               You're here
             </div>
 
-            <div className="absolute -bottom-3 -left-3 bg-secondary text-secondary-foreground px-4 py-2 rounded-lg text-sm font-semibold shadow-card">
+            <div className="hidden sm:block absolute -bottom-3 -left-3 bg-secondary text-secondary-foreground px-4 py-2 rounded-lg text-sm font-semibold shadow-card">
               Your future awaits
             </div>
           </div>
