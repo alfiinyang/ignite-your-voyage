@@ -40,8 +40,8 @@ const Contact = () => {
   }, []);
 
   const contactInfo = [
-    { icon: <Mail className="h-5 w-5" />, title: "Email", details: "annieoous1@gmail.com", description: "Send us an email anytime" },
-    { icon: <Phone className="h-5 w-5" />, title: "Phone", details: "+44 7730 466665", description: "Mon-Fri 9AM-6PM GMT" },
+    { icon: <Mail className="h-5 w-5" />, title: "Email", details: "info@unborderedpath.com", description: "Send us an email anytime" },
+    { icon: <Phone className="h-5 w-5" />, title: "Phone", details: "+44 7730 466765", description: "Mon-Fri 9AM-6PM GMT" },
     { icon: <MapPin className="h-5 w-5" />, title: "Location", details: "Remote & Online", description: "Serving clients worldwide" },
     { icon: <Clock className="h-5 w-5" />, title: "Response Time", details: "Within 24 hours", description: "We'll get back to you quickly" },
   ];
