@@ -128,7 +128,7 @@ const Contact = () => {
                 </h3>
                 <div className="space-y-4">
                   {[
-                    { q: "How quickly can I start coaching?", a: "Most clients can start within 1-2 weeks of initial contact, depending on availability and service type." },
+                    { q: "How quickly can I begin my coaching sessions?", a: "Most clients can start within 1-2 weeks of initial contact, depending on availability and service type." },
                     { q: "Do you offer free consultations?", a: "Yes! We offer a complimentary 30-minute consultation to discuss your goals and how we can help." },
                     { q: "What if I'm not sure which service is right for me?", a: "That's what the consultation is for! We'll assess your situation and recommend the best approach." },
                   ].map((faq, i) => (
