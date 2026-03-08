@@ -92,18 +92,18 @@ const Footer = () => {
             </h4>
             <div className="space-y-3">
               <a
-                href="mailto:annieoous1@gmail.com"
+                href="mailto:info@unborderedpath.com"
                 className="flex items-center gap-2.5 text-sm text-background/60 hover:text-background transition-colors"
               >
                 <Mail size={14} className="flex-shrink-0" />
-                annieoous1@gmail.com
+                info@unborderedpath.com
               </a>
               <a
-                href="tel:+447730466665"
+                href="tel:+447730466765"
                 className="flex items-center gap-2.5 text-sm text-background/60 hover:text-background transition-colors"
               >
                 <Phone size={14} className="flex-shrink-0" />
-                +44 7730 466665
+                +44 7730 466765
               </a>
               <div className="flex items-start gap-2.5 text-sm text-background/60">
                 <MapPin size={14} className="flex-shrink-0 mt-0.5" />
