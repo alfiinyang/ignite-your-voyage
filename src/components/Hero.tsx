@@ -1,15 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroBackgroundImage from "@/assets/career-person_w2200xh1238.png";
+import heroBackgroundImageSmall from "@/assets/career-person_w899xh506.png";
+import heroBackgroundImageMedium from "@/assets/career-person_w1401xh788.png";
+import heroBackgroundImageLarge from "@/assets/career-person_w2200xh1238.png";
 
-const heroBackgroundImage =
-  "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=2200&q=80";
-const heroBackgroundImageSmall =
-  "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=900&q=75";
-const heroBackgroundImageMedium =
-  "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=1400&q=75";
-const heroBackgroundImageLarge =
-  "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=2200&q=80";
+// const heroBackgroundImage =
+//   "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=2200&q=80";
+// const heroBackgroundImageSmall =
+//   "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=900&q=75";
+// const heroBackgroundImageMedium =
+//   "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=1400&q=75";
+// const heroBackgroundImageLarge =
+//   "https://images.unsplash.com/photo-1758876021772-2684360dfc97?auto=format&fit=crop&w=2200&q=80";
 
 const Hero = () => {
   return (
