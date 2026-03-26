@@ -31,7 +31,7 @@ const Services = () => {
     {
       icon: <BookOpen className="h-7 w-7" />,
       title: "Career Bootcamp",
-      description: "Intensive 4-week program designed to transform your career trajectory completely.",
+      description: "Intensive 6-week program designed to transform your career trajectory completely.",
       features: ["Weekly workshops", "Personal action plan", "Resume optimization", "Interview prep", "10 participants/cohort"],
       price: "$500 (6 weeks)",
       duration: "4 hours/week",
